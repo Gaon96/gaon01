@@ -1,0 +1,387 @@
+.main {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  .blur {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg_01_02.png) no-repeat 50% 0;
+    background-size: cover;
+  }
+  .video {
+    position: fixed;
+    top: 0%;
+    z-index: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: auto;
+  }
+  .character {
+    position: absolute;
+    z-index: 1;
+    bottom: 14%;
+    left: 0%;
+    width: 672px;
+    height: 600px;
+    // background: url(../images/chracter_01.png) no-repeat 50% 0;
+    background-size: cover;
+    .hair01 {
+      position: absolute;
+      z-index: 5;
+      width: 114px;
+      height: 68px;
+      left: 28%;
+      top: 23%;
+      transform-origin: top;
+      animation: hair_ani01 5s infinite ease-in;
+    }
+    .hair02 {
+      position: absolute;
+      z-index: 4;
+      width: 101px;
+      height: 68px;
+      left: 29%;
+      top: 26%;
+      transform-origin: top;
+      animation: hair_ani02 5s infinite linear;
+    }
+    .hair03 {
+      position: absolute;
+      z-index: 3;
+      width: 94px;
+      height: 62px;
+      left: 29%;
+      top: 26%;
+      transform-origin: top;
+      animation: hair_ani01 5s infinite linear;
+    }
+    .hair04 {
+      position: absolute;
+      z-index: 2;
+      width: 108px;
+      height: 62px;
+      left: 29%;
+      top: 27%;
+      transform-origin: top;
+      animation: hair_ani02 5s infinite ease-in;
+    }
+    .hair05 {
+      position: absolute;
+      z-index: 1;
+      width: 144px;
+      height: 99px;
+      left: 26%;
+      top: 22%;
+      transform-origin: top;
+      animation: hair_ani03 5s infinite linear;
+    }
+
+    @keyframes hair_ani01 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(5deg);
+      }
+      85% {
+        transform: rotate(-5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes hair_ani02 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(-5deg);
+      }
+      85% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes hair_ani03 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(-2deg);
+      }
+      85% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    .face01 {
+      position: absolute;
+      z-index: 2;
+      width: 74px;
+      height: 74px;
+      left: 32%;
+      top: 31%;
+      animation: body_ani01 4s infinite linear;
+    }
+    .face02 {
+      position: absolute;
+      z-index: 0;
+      width: 114px;
+      height: 127px;
+      left: 29%;
+      top: 24.5%;
+      animation: body_ani01 5s infinite linear;
+    }
+    .face03 {
+      position: absolute;
+      z-index: -1;
+      width: 51px;
+      height: 54px;
+      left: 35%;
+      top: 39%;
+    }
+    .body01 {
+      position: absolute;
+      z-index: 0;
+      width: 263px;
+      height: 361px;
+      left: 20%;
+      top: 41%;
+      animation: body_ani01 5s infinite linear;
+    }
+    .body02 {
+      position: absolute;
+      z-index: 0;
+      width: 100px;
+      height: 157px;
+      left: 52%;
+      top: 46%;
+      animation: body_ani01 5s infinite linear;
+    }
+    .body03 {
+      position: absolute;
+      z-index: 2;
+      width: 194px;
+      height: 198px;
+      left: 38%;
+      top: 41%;
+      transform-origin: bottom;
+      animation: body_ani01 5s infinite linear, body_ani02 5s infinite linear;
+    }
+    .body04 {
+      position: absolute;
+      z-index: -1;
+      width: 98px;
+      height: 290px;
+      left: 16%;
+      top: 45%;
+      transform-origin: top;
+      animation: body_ani01 6s infinite linear;
+    }
+    .body05 {
+      position: absolute;
+      z-index: 0;
+      width: 53px;
+      height: 87px;
+      left: 21%;
+      top: 82%;
+      transform-origin: top;
+      animation: body_ani03 6s infinite linear;
+    }
+    @keyframes body_ani01 {
+      0% {
+        transform: translateY(0);
+      }
+      45% {
+        transform: translateY(0.5%);
+      }
+      85% {
+        transform: translateY(-0.5%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes body_ani02 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(-1deg);
+      }
+      85% {
+        transform: rotate(1deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes body_ani03 {
+      0% {
+        transform: translateY(0);
+      }
+      45% {
+        transform: translateY(3%);
+      }
+      85% {
+        transform: translateY(-3%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .wing01 {
+      position: absolute;
+      z-index: 1;
+      width: 191px;
+      height: 165px;
+      left: 11%;
+      top: 36%;
+      transform-origin: top right;
+      animation: body_ani01 5s infinite linear, body_ani02 5s infinite linear;
+    }
+    .wing02 {
+      position: absolute;
+      z-index: 0;
+      width: 136px;
+      height: 135px;
+      left: 25%;
+      top: 45%;
+      transform-origin: top;
+      animation: wing_ani01 5s infinite ease;
+    }
+    .wing03 {
+      position: absolute;
+      z-index: -2;
+      width: 386px;
+      height: 600px;
+      left: 0;
+      top: 7%;
+      transform-origin: right;
+      animation: wing_ani02 7s infinite linear;
+    }
+    .wing04 {
+      position: absolute;
+      z-index: -2;
+      width: 601px;
+      height: 600px;
+      left: 10%;
+      top: 7%;
+      transform-origin: left;
+      animation: wing_ani03 7s infinite linear;
+    }
+    @keyframes wing_ani01 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(1deg);
+      }
+      85% {
+        transform: rotate(-1deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes wing_ani02 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(2deg);
+      }
+      85% {
+        transform: rotate(-2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes wing_ani03 {
+      0% {
+        transform: rotate(0);
+      }
+      45% {
+        transform: rotate(-2deg);
+      }
+      85% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .bg01 {
+    width: 100%;
+    height: 100%;
+    // background: #c7cdc2 url(../images/bg_01_01.png) no-repeat 50% 0;
+    position: relative;
+    .question_box {
+      position: absolute;
+      z-index: 3;
+      right: 20%;
+      bottom: 5%;
+      width: 404px;
+      height: 282px;
+      background: url(../images/script_box.png) no-repeat 50% 0;
+      background-size: cover;
+      .question_txt {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-wrap: wrap;
+        top: 7%;
+        width: 88%;
+        height: 85%;
+        z-index: 100;
+        font-size: 12px;
+        color: #000;
+        .question_txt_inner {
+          width: 50%;
+        }
+      }
+    }
+    .inner {
+      z-index: 2;
+      position: relative;
+      width: 55%;
+      height: 95%;
+      margin: 0 auto;
+      .script_box {
+        position: absolute;
+        padding: 1%;
+        z-index: 4;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        background-color: rgba($color: #191f21, $alpha: 0.8);
+        border: 10px solid rgba($color: #191f21, $alpha: 0.5);
+        box-sizing: border-box;
+        .txt_wrap {
+          position: relative;
+          width: 95%;
+          height: 100%;
+          margin: 0 auto;
+          button {
+            position: absolute;
+            bottom: 0;
+            background-color: #3d474e;
+            border: none;
+            color: #fff;
+            padding: 0.5% 0.8%;
+          }
+        }
+      }
+    }
+  }
+}

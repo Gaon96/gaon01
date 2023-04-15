@@ -1,25 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './styles/main.scss'
+import qList from './data/Question.json'
+import QuestionList from './components/QuestionList'
+import TxtList from './components/TxtList'
 
 function App() {
+  const [showId, setshowId] = useState('')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="blur"></div>
+      <div className="character">
+        <div className="hair">
+          <img className="hair01" src="/hair/hair_01.png"></img>
+          <img className="hair02" src="/hair/hair_02.png"></img>
+          <img className="hair03" src="/hair/hair_03.png"></img>
+          <img className="hair04" src="/hair/hair_04.png"></img>
+          <img className="hair05" src="/hair/hair_05.png"></img>
+        </div>
+        <div className="face">
+          <img className="face01" src="/face/face01.png"></img>
+          <img className="face02" src="/face/face02.png"></img>
+          <img className="face03" src="/face/face03.png"></img>
+        </div>
+        <div className="body">
+          <img className="body01" src="/body/body01.png"></img>
+          <img className="body02" src="/body/body02.png"></img>
+          <img className="body03" src="/body/body03.png"></img>
+          <img className="body04" src="/body/body04.png"></img>
+          <img className="body05" src="/body/body05.png"></img>
+        </div>
+        <div className="wing">
+          <img className="wing01" src="/wing/wing01.png"></img>
+          <img className="wing02" src="/wing/wing02.png"></img>
+          <img className="wing03" src="/wing/wing03.png"></img>
+          <img className="wing04" src="/wing/wing04.png"></img>
+        </div>
+      </div>
+      <div className="e_wrap bg01">
+        <video className="video" src="/videos/video.mp4" autoPlay loop muted />
+        <div className="question_box">
+          <div className="question_txt">
+            {qList.map(qList => (
+              <div
+                className="question_txt_inner"
+                onClick={() => {
+                  setshowId(qList.id)
+                }}
+              >
+                <QuestionList propstitle={qList.title} propstxt={qList.txt} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="inner">
+          <div className="script_box">
+            <div className="txt_wrap">
+              <TxtList className="ActiveList" id={showId} />
+              <button>대화끝내기</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
