@@ -3,12 +3,27 @@ import './styles/main.scss'
 import qList from './data/Question.json'
 import QuestionList from './components/QuestionList'
 import TxtList from './components/TxtList'
+import AudioPlayer from 'react-h5-audio-player'
+import 'react-h5-audio-player/lib/styles.css'
 
 function App() {
   const [showId, setshowId] = useState('')
 
   return (
     <div className="main">
+      <div>
+        <AudioPlayer
+          className="my_audio_player"
+          src={process.env.PUBLIC_URL + '/song/sound.mp3'}
+          autoPlay
+          loop
+          onPlay={() => console.log('onPlay')}
+          alt="Track - Scott Buckley - Ashes of a Fallen Year Soundcloud - http://bit.ly/2iAj8Vy 나눔뮤직 - https://tv.naver.com/v/11469898"
+        />
+        <p className="AudioPlayer_txt">
+          Track - Scott Buckley - Ashes of a Fallen Year
+        </p>
+      </div>
       <div className="blur"></div>
       <div className="character">
         <div className="hair">
@@ -114,7 +129,6 @@ function App() {
           <div className="script_box">
             <div className="txt_wrap">
               <TxtList className="ActiveList" id={showId} />
-              <button>대화끝내기</button>
             </div>
           </div>
         </div>

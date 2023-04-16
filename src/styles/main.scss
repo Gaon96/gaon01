@@ -2,6 +2,54 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
+  .my_audio_player {
+    z-index: 5;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    border: none;
+    opacity: 0.5;
+    background-color: transparent;
+    .rhap_progress-indicator {
+      width: 12px;
+      height: 12px;
+      top: -5px;
+    }
+    .rhap_time {
+      display: none;
+    }
+    .rhap_main-controls {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 38px;
+    }
+    .rhap_progress-bar {
+      height: 2px;
+      width: 100px;
+      left: 64px;
+    }
+    .rhap_volume-container,
+    .rhap_rewind-button,
+    .rhap_forward-button,
+    .rhap_additional-controls {
+      display: none;
+    }
+  }
+  .AudioPlayer_txt {
+    z-index: 5;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    top: 54px;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.5;
+  }
   .blur {
     position: fixed;
     z-index: 2;
@@ -22,7 +70,7 @@
   .character {
     position: absolute;
     z-index: 1;
-    bottom: 14%;
+    bottom: 100px;
     left: 0%;
     width: 672px;
     height: 600px;
@@ -190,7 +238,7 @@
       z-index: 0;
       width: 53px;
       height: 87px;
-      left: 21%;
+      left: 22%;
       top: 82%;
       transform-origin: top;
       animation: body_ani03 6s infinite linear;

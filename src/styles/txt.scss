@@ -1,3 +1,41 @@
 .txtlist_main {
   color: #fff;
+  width: 612px;
+  line-height: 1.5;
+  .txt02,
+  .txt03,
+  .txt01,
+  .txt04 {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  .txt01active {
+    p {
+      margin-bottom: 10px;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .txtlist_img {
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      border-radius: 20px;
+    }
+  }
+}
+.txtlist_btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #3d474e;
+  border: none;
+  color: #fff;
+  padding: 0.5% 0.8%;
 }
