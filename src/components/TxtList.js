@@ -85,7 +85,7 @@ function TxtList({ id }) {
         <div className="txtlist_img">
           <img
             className="script_discription"
-            src={`/scriptimages/${propsimg()}`}
+            src={`https://jihae1996.github.io/gaon01/scriptimages/${propsimg()}`}
           ></img>
         </div>
         {/* <button onClick={handleClick01}>{`${propsbtn()}`}</button> */}
